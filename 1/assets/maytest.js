@@ -56,10 +56,10 @@ function draw() {
     // text(" /Một ngày đẹp trời/\n/Rủ mình/\n/...về chơi/\n/ *O^O* /",width/2,height-100)
     // pop();
 
-    push();
-    textAlign(CENTER, TOP);
-    fill(238, 255, 0)
-    textSize(12)
-    text(textday[index % textday.length],width/2,height-100)
-    pop();
+    // push();
+    // textAlign(CENTER, TOP);
+    // fill(238, 255, 0)
+    // textSize(12)
+    // text(textday[index % textday.length],width/2,height-100)
+    // pop();
 }
