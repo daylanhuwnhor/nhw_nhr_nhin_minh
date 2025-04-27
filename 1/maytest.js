@@ -1,14 +1,15 @@
 let may1, may2, may3, may4;
+let may;
 let vdotexture;
 let index = 0; 
 let textday = ["một", "ngày", "đẹp", "trời"];
 
 function preload() {
-    may1 = loadImage("ASSETS/MAY1.jpg");
-    may2 = loadImage("ASSETS/MAY2.png");
-    may3 = loadImage("ASSETS/MAY3.png");
-    may4 = loadImage("ASSETS/MAY4.png");
-    vdotexture = createVideo("ASSETS/texture.mov");
+    may1 = loadImage("assets/MAY1.jpg");
+    may2 = loadImage("assets/MAY2.png");
+    may3 = loadImage("assets/MAY3.png");
+    may4 = loadImage("assets/MAY4.png");
+    vdotexture = createVideo("assets/texture.mov");
 }
 
 function setup() {
@@ -56,10 +57,10 @@ function draw() {
     // text(" /Một ngày đẹp trời/\n/Rủ mình/\n/...về chơi/\n/ *O^O* /",width/2,height-100)
     // pop();
 
-    // push();
-    // textAlign(CENTER, TOP);
-    // fill(238, 255, 0)
-    // textSize(12)
-    // text(textday[index % textday.length],width/2,height-100)
-    // pop();
+    push();
+    textAlign(CENTER, TOP);
+    fill(238, 255, 0)
+    textSize(12)
+    text(textday[index % textday.length],width/2,height-100)
+    pop();
 }
