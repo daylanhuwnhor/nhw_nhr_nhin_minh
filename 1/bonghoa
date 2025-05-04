@@ -1,0 +1,54 @@
+let spacingX = 60;
+let spacingY = 60;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background(10);
+
+  for (let y = 40; y < height; y += spacingY) {
+    for (let x = 40; x < width; x += spacingX) {
+      let d = dist(mouseX, mouseY, x, y);
+      let scaleBong = map(d, 0, 500, 4, 0.3);
+      scaleBong = constrain(scaleBong, 0.5, 1.5);
+      drawBong(x, y, scaleBong);
+    //   rotate(frameCount/10)
+    }
+  }
+}
+
+function drawBong(x, y, s = 1) {
+  push();
+  translate(x, y);
+  scale(s);
+  noStroke();
+
+  fill("#FF49AD");
+  for (let i = 0; i < 8; i++) {
+    push();
+    rotate(i * 45);
+    ellipse(0, -20, 8, 30);
+    pop();
+  }
+
+
+  fill(255);
+  ellipse(0, 0, 25, 10);
+  ellipse(0, 0, 10, 25);
+
+
+  fill("#fff34d");
+  for (let i = 0; i < 4; i++) {
+    push();
+    rotate(i * 90);
+    ellipse(0, -12, 4, 12);
+    ellipse(0, -18, 4, 4);
+    pop();
+
+  }
+
+  pop();
+}
